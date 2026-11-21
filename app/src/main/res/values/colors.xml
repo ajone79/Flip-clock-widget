@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="digit">#F4F1EA</color>
+    <color name="card_top">#3A3A3C</color>
+    <color name="card_bottom">#1C1C1E</color>
+    <color name="split">#0A0A0A</color>
+    <color name="hinge">#8E8E93</color>
+    <color name="strip_text">#E5E5EA</color>
+    <color name="accent">#FF9F0A</color>
+</resources>

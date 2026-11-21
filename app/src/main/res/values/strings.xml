@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Flip Clock</string>
+    <string name="widget_description">Flip-card clock with the date and your next alarm</string>
+    <string name="add_widget">Add widget to home screen</string>
+    <string name="pin_not_supported">Your launcher can\'t add widgets from here. Long-press the home screen, tap Widgets, find Flip Clock.</string>
+    <string name="how_to">Or add it by hand:\n1. Long-press an empty spot on your home screen\n2. Tap Widgets\n3. Find Flip Clock\n4. Drag it onto the home screen\n\nTap the clock to open your alarms. Tap the date to open your calendar.</string>
+</resources>

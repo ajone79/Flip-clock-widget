@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/widget_bg">
+
+    <LinearLayout
+        android:id="@+id/clock_area"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/hour_card"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/card_bg">
+
+            <TextClock
+                android:id="@+id/hour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:gravity="center"
+                android:format12Hour="hh"
+                android:format24Hour="HH"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textColor="@color/digit"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="18sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="2sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/split"
+                android:scaleType="fitXY"
+                android:importantForAccessibility="no" />
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="16dp"
+                android:layout_gravity="start|center_vertical"
+                android:src="@drawable/hinge"
+                android:scaleType="fitXY"
+                android:importantForAccessibility="no" />
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="16dp"
+                android:layout_gravity="end|center_vertical"
+                android:src="@drawable/hinge"
+                android:scaleType="fitXY"
+                android:importantForAccessibility="no" />
+
+            <TextClock
+                android:id="@+id/ampm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="6dp"
+                android:format12Hour="a"
+                android:format24Hour="a"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@color/hinge" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:id="@+id/minute_card"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/card_bg">
+
+            <TextClock
+                android:id="@+id/minute"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:gravity="center"
+                android:format12Hour="mm"
+                android:format24Hour="mm"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textColor="@color/digit"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="18sp"
+                android:autoSizeMaxTextSize="200sp"
+                android:autoSizeStepGranularity="2sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/split"
+                android:scaleType="fitXY"
+                android:importantForAccessibility="no" />
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="16dp"
+                android:layout_gravity="start|center_vertical"
+                android:src="@drawable/hinge"
+                android:scaleType="fitXY"
+                android:importantForAccessibility="no" />
+
+            <ImageView
+                android:layout_width="4dp"
+                android:layout_height="16dp"
+                android:layout_gravity="end|center_vertical"
+                android:src="@drawable/hinge"
+                android:scaleType="fitXY"
+                android:importantForAccessibility="no" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/date_strip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/strip_bg">
+
+        <TextClock
+            android:id="@+id/date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:format12Hour="EEEE d MMMM"
+            android:format24Hour="EEEE d MMMM"
+            android:textSize="14sp"
+            android:textColor="@color/strip_text"
+            android:fontFamily="sans-serif-medium"
+            android:singleLine="true"
+            android:ellipsize="end" />
+
+        <ImageView
+            android:id="@+id/alarm_icon"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_alarm"
+            android:visibility="gone"
+            android:importantForAccessibility="no" />
+
+        <TextView
+            android:id="@+id/alarm_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textSize="13sp"
+            android:textColor="@color/accent"
+            android:fontFamily="sans-serif-medium"
+            android:singleLine="true"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>
